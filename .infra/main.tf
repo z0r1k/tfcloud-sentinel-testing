@@ -41,7 +41,8 @@ resource "aws_lambda_function" "tfc_gitops_demo_lambda" {
   }
 
   tags = {
-    user_name = var.tag_user_name
-    department = "Teletubbies"
+    user_name  = var.tag_user_name
+    department = var.tag_department
+    billable   = var.tag_billable
   }
 }
