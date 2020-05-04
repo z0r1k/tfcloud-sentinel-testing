@@ -5,5 +5,5 @@ pack:
 
 fmt:
 	@echo ">>> Formatting..."
-	@terraform fmt -recursive
+	@terraform fmt -recursive ./.infra
 	@echo ">>> Done."
