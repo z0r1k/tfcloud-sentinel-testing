@@ -23,13 +23,13 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
-resource "aws_lambda_function" "demo_lambda" {
-  function_name = "tfcloud_gitops_demo_lambda"
+resource "aws_lambda_function" "tfc_gitops_demo_lambda" {
+  function_name = "tfc_demo_lambda"
 
   handler = "index.handler"
   runtime = "nodejs10.x"
 
-  filename         = "function.zip"
+  filename         = "../function.zip"
   source_code_hash = filebase64sha256("../function.zip")
 
   role = aws_iam_role.iam_for_lambda.arn
